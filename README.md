@@ -299,4 +299,3 @@ Content-Type: application/json
 
 - `COMPLETED` 또는 `CANCELLED` 상태인 경우: 담당자 드롭다운 비활성화
 - 다른 상태인 경우: 담당자 변경 가능
-"# frontend-assignment" 

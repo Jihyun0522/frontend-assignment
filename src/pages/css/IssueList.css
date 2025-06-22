@@ -1,0 +1,94 @@
+.issue-list-wrapper {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.issue-list-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-label {
+  font-weight: 600;
+  margin-right: 10px;
+  color: #555;
+}
+
+.filter-select {
+  padding: 6px 12px;
+  border: 1.5px solid #bbb;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #2f80ed;
+  box-shadow: 0 0 5px rgba(47, 128, 237, 0.5);
+}
+
+.issue-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.issue-item {
+  padding: 16px 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  background-color: #fafafa;
+}
+
+.issue-item:hover {
+  background-color: #e6f0ff;
+  box-shadow: 0 4px 12px rgba(47,128,237,0.2);
+}
+
+.issue-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #1a1a1a;
+}
+
+.issue-meta {
+  font-size: 14px;
+  color: #666;
+  margin-top: 6px;
+}
+
+.create-button-container {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.create-button {
+  background-color: #2f80ed;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #1366d6;
+}

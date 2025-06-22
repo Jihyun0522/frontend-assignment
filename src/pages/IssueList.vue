@@ -1,11 +1,10 @@
 <template>
-  <div class="p-6 max-w-3xl mx-auto">
-    <h1 class="text-2xl font-bold mb-4">이슈 목록</h1>
+  <div class="issue-list-wrapper">
+    <h1 class="issue-list-title">이슈 목록</h1>
 
-    <!-- 필터 -->
-    <div class="mb-4">
-      <label class="mr-2">상태 필터:</label>
-      <select v-model="statusFilter" class="border rounded px-2 py-1">
+    <div class="filter-group">
+      <label class="filter-label" for="statusFilter">상태 필터:</label>
+      <select id="statusFilter" v-model="statusFilter" class="filter-select">
         <option value="">전체</option>
         <option value="PENDING">대기</option>
         <option value="IN_PROGRESS">진행 중</option>
@@ -14,16 +13,15 @@
       </select>
     </div>
 
-    <!-- 목록 -->
-    <ul class="space-y-2">
+    <ul class="issue-list">
       <li
         v-for="issue in filteredIssues"
         :key="issue.id"
-        class="p-4 border rounded hover:bg-gray-50 cursor-pointer"
+        class="issue-item"
         @click="goToDetail(issue.id)"
       >
-        <div class="font-semibold">{{ issue.title }}</div>
-        <div class="text-sm text-gray-600">
+        <div class="issue-title">{{ issue.title }}</div>
+        <div class="issue-meta">
           상태: {{ issue.status }} |
           담당자: {{ issue.user?.name || '없음' }} |
           생성일: {{ formatDate(issue.createdAt) }}
@@ -31,9 +29,8 @@
       </li>
     </ul>
 
-    <!-- 생성 버튼 -->
-    <div class="mt-6">
-      <button @click="goToCreate" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+    <div class="create-button-container">
+      <button @click="goToCreate" class="create-button">
         + 새 이슈 생성
       </button>
     </div>
@@ -74,3 +71,4 @@ const formatDate = (iso) => {
   })
 }
 </script>
+<style src="./css/IssueList.css" scoped></style>
